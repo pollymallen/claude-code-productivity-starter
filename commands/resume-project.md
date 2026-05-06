@@ -22,7 +22,7 @@ Resume work on a project.
 
 Read these files from the project folder:
 - `PLAN.md` — the plan of record (goals, tasks, phases)
-- `SESSION-LOG.md` — what happened in previous sessions (if it exists)
+- `SESSION-LOG.md` — start with the **Project Context** block at the top for the full arc, then read the most recent session entries for specifics
 
 ### 3. Summarize
 
@@ -31,12 +31,12 @@ Present a brief status update:
 ```
 ## Project: [Name]
 
-**Status:** [from PLAN.md]
+**Context:** [from the Project Context block — the full arc in 2-3 sentences]
 **Last session:** [date, what was done]
 **Progress:** X of Y tasks complete
 
 ### Where we left off:
-[Last session's notes]
+[Last session's "where to pick up next time"]
 
 ### Next up:
 - [ ] Task 1
@@ -52,11 +52,4 @@ Ask:
 - "Ready to continue with [next task]?"
 - "Or would you like to work on something else from the plan?"
 
----
-
-## When the Session Ends
-
-When the user wraps up:
-1. Update `PLAN.md` — check off completed tasks, update status
-2. Add a session entry to `SESSION-LOG.md` (create it if it doesn't exist) with: date, what was done, what's next, any blockers
-3. Update `PORTFOLIO.md` if the project status changed
+When you're done working, run `/wrap` to save your progress.
