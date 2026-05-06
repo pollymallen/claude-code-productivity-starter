@@ -11,3 +11,6 @@ Thumbs.db
 
 # Claude Code local state
 .claude/
+
+# Private session tracking
+.project/
