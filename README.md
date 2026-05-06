@@ -17,11 +17,11 @@ Five commands run the system:
 
 | Command | What it does | When to use it |
 |---------|-------------|----------------|
-| `/start` | Reads your files, tells you what matters | Beginning of every session |
-| `/wrap` | Saves everything from the session to files | End of every session |
+| `/start` | Reads your files, tells you what matters, lets you reprioritize | Beginning of your day |
 | `/dump` | You talk, Claude sorts it into the right file | Whenever your brain is full |
 | `/new-project` | Creates a project folder with a plan | When you start something new |
 | `/resume-project` | Picks up a project where you left off | When you return to a project |
+| `/wrap` | Saves session progress to project + daily files | End of a project session |
 
 ## Setup (1 minute)
 
@@ -35,8 +35,8 @@ Claude will grab the files from GitHub and put everything in the right place.
 
 Then:
 
-1. **Run `/dump`** and tell Claude everything on your plate. It'll sort it into the three files.
-2. **Run `/start`** at the beginning of each session. Run `/wrap` at the end.
+1. **Run `/dump`** and tell Claude everything on your plate. It'll sort it into your files.
+2. **Run `/start`** the next morning to see your briefing.
 
 That's it. The system builds itself from your first brain dump.
 
@@ -59,31 +59,45 @@ That's it. The system builds itself from your first brain dump.
 
 </details>
 
-## The Daily Loop
+## The Daily Flow
 
 ```
-/start          ← Claude reads your files, gives you a briefing
-... do work ... ← Claude helps you with tasks
-/wrap           ← Claude saves session notes + updates your files
+/start                  ← Briefing: what matters today, reprioritize if needed
+cd project-folder/      ← Move to a project
+/new-project or         ← Start something new, or
+/resume-project         ← Pick up where you left off
+... do work ...         ← Claude helps you with the project
+/wrap                   ← Save session progress, update portfolio
 ```
 
-## The Brain Dump
+### `/start` — Morning briefing
 
-When your head is full, just run `/dump` and talk:
+`/start` reads all your files and gives you a 3-5 sentence summary: what's the priority, what's due, what's in flight. It also lets you check things off, reprioritize, or add new items before you dive in.
+
+### `/dump` — Brain dump
+
+When your head is full, run `/dump` and talk:
 
 > "I need to finish the proposal by Friday. Also I should email Sarah back about the partnership thing. Oh and I had an idea for a new workshop format — three days instead of one, with homework between sessions. My taxes are due May 15. And I need to buy dog food."
 
-Claude will sort each item into TODAY.md, WEEK.md, or BACKLOG.md based on urgency and type. You don't have to categorize anything yourself.
+Claude sorts each item into TODAY.md, WEEK.md, or BACKLOG.md based on urgency and type. You don't have to categorize anything yourself.
 
-## Managing Projects
+### `/new-project` and `/resume-project` — Project work
 
-When you have something bigger than a single task — a project with multiple steps — use the project commands:
+When you have something bigger than a single task, give it a project folder:
 
-1. **`/new-project website redesign`** — Claude asks a few questions, creates a project folder with a plan, and adds it to your portfolio
-2. **Work on it** across multiple sessions — Claude creates a `PLAN.md` and `SESSION-LOG.md` in the project folder automatically
-3. **`/resume-project`** — When you come back, Claude reads the plan and session log, tells you where you left off
+- **`/new-project website redesign`** — Claude asks a few questions, creates a project folder with a plan, and adds it to your portfolio
+- **`/resume-project`** — Claude reads the plan and session log, tells you where you left off
 
-Your `PORTFOLIO.md` keeps a running list of everything you're working on so nothing falls through the cracks.
+### `/wrap` — End a project session
+
+When you're done working on a project, `/wrap` saves everything:
+- Updates `PLAN.md` — checks off what you finished
+- Writes a session entry to `SESSION-LOG.md` — what was done, what's next, any blockers
+- Updates `PORTFOLIO.md` — so your cross-project view stays current
+- Updates daily/weekly files if anything changed
+
+You can pick up cold next time because everything is in the files.
 
 ## What's Next (When You Outgrow This)
 
