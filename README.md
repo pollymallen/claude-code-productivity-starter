@@ -20,9 +20,27 @@ Three commands run the system:
 | `/wrap` | Saves everything from the session to files | End of every session |
 | `/dump` | You talk, Claude sorts it into the right file | Whenever your brain is full |
 
-## Setup (2 minutes)
+## Setup (1 minute)
 
-1. **Clone this repo** (or download it) into wherever you keep projects:
+Open Claude Code in the folder where you want to keep your productivity files and paste this:
+
+```
+Install the productivity starter kit from https://github.com/pollymallen/claude-code-productivity-starter — fetch the three template files (TODAY.md, WEEK.md, BACKLOG.md) into this directory and install the three slash commands (start.md, wrap.md, dump.md) into ~/.claude/commands/
+```
+
+Claude will grab the files from GitHub and put everything in the right place.
+
+Then:
+
+1. **Run `/dump`** and tell Claude everything on your plate. It'll sort it into the three files.
+2. **Run `/start`** at the beginning of each session. Run `/wrap` at the end.
+
+That's it. The system builds itself from your first brain dump.
+
+<details>
+<summary>Manual setup (if you prefer)</summary>
+
+1. **Clone this repo** into wherever you keep projects:
    ```
    git clone https://github.com/pollymallen/claude-code-productivity-starter.git ~/my-system
    cd ~/my-system
@@ -36,17 +54,9 @@ Three commands run the system:
    cp commands/dump.md ~/.claude/commands/
    ```
 
-3. **Open Claude Code** in your folder:
-   ```
-   cd ~/my-system
-   claude
-   ```
+3. **Open Claude Code** in your folder and run `/dump` to get started.
 
-4. **Run `/dump`** and tell Claude everything on your plate. It'll sort it into the three files.
-
-5. **Run `/start`** at the beginning of each session. Run `/wrap` at the end.
-
-That's it. The system builds itself from your first brain dump.
+</details>
 
 ## The Daily Loop
 
